@@ -1,0 +1,23 @@
+<h1>Listing newtests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @newtests.each do |newtest| %>
+  <tr>
+    <td><%= newtest.name %></td>
+    <td><%= link_to 'Show', newtest %></td>
+    <td><%= link_to 'Edit', edit_newtest_path(newtest) %></td>
+    <td><%= link_to 'Destroy', newtest, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Newtest', new_newtest_path %>
